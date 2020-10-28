@@ -1,4 +1,7 @@
 from django.urls import path,include
 from core import views
 
-urlpatterns = []
+app_name = 'core'
+urlpatterns = [
+    path('', views.index)
+]

@@ -21,6 +21,6 @@ urlpatterns = [
     path('blogs/',include('blogs.urls', namespace = 'blogs')),
     path('cap/',include('cap.urls', namespace = 'cap')),
     path('',include('core.urls', namespace = 'core')),
-    # path('courses/',include('courses.urls', namespace = 'courses')),
+    path('courses/',include('courses.urls', namespace = 'courses')),
     path('startups/',include('startups.urls', namespace = 'startups')),
 ]
