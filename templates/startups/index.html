@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block body %}
+  {% for startup in startups%}
+    <h2> {{startup.startup_name}}</h2>
+    <h6> {{startup.startup_description}} </h6>
+  {% endfor%}
+{% endblock %}

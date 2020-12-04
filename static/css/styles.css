@@ -1,0 +1,1227 @@
+/*importing google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap");
+
+/*reset*/
+/*mostly done by normalize.css*/
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.col-4,
+.col-12,
+.col-6 {
+  padding: 0%;
+}
+.onepage-pagination li a:before {
+  background: white;
+}
+.onepage-pagination li a.active:before {
+  border: 1px solid white;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/*default fonts*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+span {
+  font-family: "Archivo", sans-serif;
+  color: white;
+}
+
+p,
+a {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 1.25vw;
+  font-weight: 600;
+}
+
+form {
+  overflow-y: hidden;
+}
+
+.carousel-caption {
+  z-index: 1;
+}
+
+/*custom*/
+/*mostly elements that are used again and again*/
+.button-main {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 2em;
+  font-size: 1.25vw;
+  font-weight: 600;
+  padding: 7px 10px;
+}
+.dark_button {
+  border: 2px solid black;
+}
+.carousel-indicators {
+  display: none;
+}
+h1 {
+  font-size: 6vw;
+  font-weight: 600;
+  line-height: 1.2;
+}
+span {
+  font-size: 2vw;
+}
+/*main stylesheet*/
+
+#main {
+  background-image: url("../images/background/background_main.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100vh;
+}
+
+#logo_ecell {
+  width: 15%;
+  height: auto;
+}
+
+nav > img {
+  margin: 1% 2% 0 0;
+  width: 3vw;
+  height: auto;
+}
+
+#social img {
+  width: 40%;
+  height: auto;
+  position: relative;
+  top: 50vh;
+  margin: 5% 0 0 0;
+  display: block;
+}
+
+#menu {
+  background-color: black;
+  margin-right: 4%;
+  cursor: pointer;
+}
+#header_main {
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+}
+#header img {
+  display: inline;
+}
+#nav-logo {
+  width: 55%;
+  height: auto;
+}
+
+.sidenav {
+  display: none;
+  height: 100%; /* 100% Full-height */
+  width: 250px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #012044; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 2em; /* Place content 4em from the top */
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  font-size: 1.5vw;
+  color: lightblue;
+  display: block;
+  transition: 0.3s;
+  font-weight: 400;
+  margin-left: 10%;
+  text-decoration: none;
+  line-height: 2;
+  z-index: 100;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #ffffff;
+  z-index: 100;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: -0.01em;
+  right: 0.2em;
+  font-size: 3.5em;
+}
+
+#sidenav-name {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  position: relative;
+  left: -30%;
+}
+
+.sidenav img {
+  width: 15%;
+  height: 100%;
+  position: relative;
+}
+/*CSS for about*/
+#about {
+  background-image: url("../images/background/background_about.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100vh;
+}
+
+#about h1 {
+  margin: 4% auto;
+}
+#about p {
+  margin: 2% auto;
+}
+#about .text-center p {
+  width: 50%;
+}
+/*CSS for SIP*/
+#sip {
+  background-image: url("../images/background/background_sip.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100vh;
+}
+#sip h1,
+p {
+  margin: 4% auto;
+}
+
+#sip .text-center p {
+  width: 50%;
+}
+
+/*CSS for courses*/
+#courses {
+  background-image: url("../images/background/background_courses.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100vh;
+}
+
+#courses h1,
+#courses p {
+  margin: 4% auto;
+}
+
+#courses .text-center p {
+  width: 50%;
+}
+#events {
+  overflow-x: hidden;
+}
+.events_1 {
+  background-image: url("../images/background/background_events_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100vh;
+}
+
+.events_2 {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100vh;
+}
+
+.events_3 {
+  background-image: url("../images/background/background_events_3.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100vh;
+}
+#events .carousel-caption {
+  margin-bottom: 20%;
+}
+#team {
+  background-image: url("../images/background/background_team.jpg");
+  background-repeat: no-repeat;
+  background-position: center 35%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+/*CSS for footer*/
+#footer {
+  background-color: #111111;
+  height: 50vh;
+  display: grid;
+  grid-template-areas:
+    "footer-item1 footer-item3 footer-item4"
+    "footer-item2 footer-item3 footer-item4"
+    "footer-item5 footer-item5 footer-item5";
+}
+
+#footer-item1 {
+  grid-area: footer-item1;
+  display: grid;
+  grid-template-areas: "footer-item1-1 footer-item1-2 footer-item1-3";
+  padding: 7% 0 0 5%;
+}
+#footer-item1 h3 {
+  font-weight: 700;
+}
+#footer-item1-1 {
+  grid-area: footer-item1-1;
+}
+#footer-item1-2 {
+  grid-area: footer-item1-2;
+}
+#footer-item1-2 .d-none p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+#footer-item1-3 {
+  grid-area: footer-item1-3;
+}
+
+#footer-item2 {
+  grid-area: footer-item2;
+  padding: 2% 0 0 5%;
+}
+#footer-item2 img {
+  width: 4%;
+  height: auto;
+}
+#footer-item3 {
+  grid-area: footer-item3;
+  padding: 9% 0 0 15%;
+}
+#footer-item3 input[type="text"] {
+  background-color: lightgray;
+  color: black;
+  border: none;
+}
+#submit {
+  position: relative;
+  top: 7px;
+  right: 4px;
+}
+#footer-item3 input[type="text"]:active {
+  border: none;
+}
+#footer-item4 {
+  grid-area: footer-item4;
+}
+#footer-item4 img {
+  width: 50%;
+  height: auto;
+  position: relative;
+  left: -25%;
+}
+#footer-item4 > h3 {
+  position: relative;
+  left: -20%;
+}
+#footer-item5 {
+  grid-area: footer-item5;
+  height: fit-content;
+}
+/*main page css done*/
+/*other pages*/
+/*recruitment page*/
+#recruitments_main {
+  background-image: url("../images/background/background_team_main.jpeg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+.recruitments_button {
+  border: 2px solid black;
+}
+#recruitments_description img {
+  width: 10vw;
+}
+#team_main {
+  background-image: url("../images/background/background_team_main.jpeg");
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+#team_description {
+  background-image: url("../images/background/background_team.jpg");
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+#team a img,
+#team_description a img {
+  width: 2vw;
+}
+#team_name {
+  margin: 0% 0 15% 0;
+}
+.sip_main {
+  background-image: url("../images/background/background_sip_main.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+  overflow-y: hidden;
+}
+.sip_main #header {
+  margin-left: 1%;
+}
+.sip_main p {
+  margin: 2% auto;
+}
+.sip_main .text-center .text-left {
+  font-size: 1vw;
+}
+.sip_main .text-center p,
+#blog p,
+.card-text,
+#podcast_main p,
+#courses_main .text-center p,
+#course_1_main .text-center p {
+  width: 70%;
+}
+/*Css for Blogs*/
+#blog {
+  background-image: url("../images/background/background_blogs.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+#blog_description {
+  background-color: #eeeeee;
+  height: 100%;
+}
+#blog_description .card {
+  margin: 0 5% 10% 5%;
+}
+#blog_description .card p,
+#courses_description .card p {
+  font-weight: 400;
+  font-size: 1vw;
+}
+.card-title {
+  margin-top: 5%;
+}
+#podcast_main {
+  background-image: url("../images/background/background_podcast.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+#course_1_main {
+  background-image: url("../images/background/background_courses.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+#courses_main {
+  background-image: url("../images/background/background_courses.jpg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+#courses_main .col-12,
+#blog .col-12 {
+  padding: 15px;
+}
+.card-title,
+.card-text {
+  color: black;
+}
+#course_1_description {
+  background-color: #eeeeee;
+}
+#course_container {
+  display: grid;
+  grid-template-areas:
+    "c1 c2"
+    "c4 c3"
+    "c5 c6"
+    "c8 c7"
+    "c9 c10"
+    "c12 c11"
+    "c13 c14"
+    "c16 c15"
+    "c17 c18"
+    "c20 c19"
+    "c21 c22";
+}
+#c1 {
+  grid-area: c1;
+}
+#c2 {
+  grid-area: c2;
+}
+#c3 {
+  grid-area: c3;
+}
+#c4 {
+  grid-area: c4;
+}
+#c5 {
+  grid-area: c5;
+}
+#c6 {
+  grid-area: c6;
+}
+#c7 {
+  grid-area: c7;
+}
+#c8 {
+  grid-area: c8;
+}
+#c9 {
+  grid-area: c9;
+}
+#c10 {
+  grid-area: c10;
+}
+#c11 {
+  grid-area: c11;
+}
+#c12 {
+  grid-area: c12;
+}
+#c13 {
+  grid-area: c13;
+}
+#c14 {
+  grid-area: c14;
+}
+#c15 {
+  grid-area: c15;
+}
+#c16 {
+  grid-area: c16;
+}
+#c17 {
+  grid-area: c17;
+}
+#c18 {
+  grid-area: c18;
+}
+#c19 {
+  grid-area: c19;
+}
+#c20 {
+  grid-area: c20;
+}
+#c21 {
+  grid-area: c21;
+}
+#c22 {
+  grid-area: c22;
+}
+#h-logo {
+  padding: 0 0 5% 0%;
+}
+#h-logo img {
+  width: 4vw;
+  height: auto;
+}
+#rec-1 {
+  background-image: url("../images/1.png");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: contain;
+  background-attachment: scroll;
+  height: 50vh;
+}
+#rec-3 {
+  background-image: url("../images/2.png");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: contain;
+  background-attachment: scroll;
+  height: 50vh;
+}
+#rec-2,
+#rec-4 {
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px 1px lightgrey;
+}
+/*CSS for startups page*/
+
+
+
+#startups_header{
+  background-image: url("../images/background/background_sip.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+
+#startup_content
+{
+  background-image: url("../images/background/background_startup_content.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+}
+
+#menu_startup {
+  width: 4%;
+  cursor: pointer;
+}
+
+#startups h1{
+
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: normal;
+  color: black;
+}
+
+#startups p{
+  font: Fira Sans;
+  
+}
+
+#startup_content p 
+{
+  color: black;
+  text-align: center;
+  position: center;
+ 
+}
+
+
+#start_row
+{
+  width: 80%;
+  margin: auto;
+}
+
+.startup_card
+{
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 10%;
+  cursor: pointer;
+
+  padding-left: 10%;
+  padding-right: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.116), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+#start_details
+{
+  padding-top: 5%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.overlay {
+  position: absolute;
+  border-radius: 30px;
+  top: 24%;
+  bottom: 0;
+  left: 15%;
+  right: 0;
+  height: 75%;
+  width: 70%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffff;
+}
+
+.startup_card:hover .overlay {
+  opacity: 1;
+}
+
+.hover_text {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* to make the card size proper in desktop*/
+@media only screen and (max-height: 760px)
+{
+      .startup_card
+    {
+      background-color: white;
+      border-radius: 30px;
+      margin-top: 10%;
+      cursor: pointer;
+
+      padding-left: 10%;
+      padding-right: 10%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.116), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+
+    #start_row
+    {
+      width: 80%;
+      margin: auto;
+    }
+
+    #start_details
+    {
+      padding-top: 5%;
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+
+    .overlay {
+      position: absolute;
+      border-radius: 30px;
+      top: 24%;
+      bottom: 0;
+      left: 15%;
+      right: 0;
+      height: 75%;
+      width: 70%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #ffffff;
+    }
+    
+    .startup_card:hover .overlay {
+      opacity: 1;
+    }
+    
+    .hover_text {
+      color: rgb(0, 0, 0);
+      font-size: 40px;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+}
+
+
+
+ 
+
+/*------------Model Working-----------*/
+
+.close {
+  color: rgb(0, 0, 0);
+  margin-left: 95%;
+  float: right;
+  padding-left: 0%;
+  padding-right: 0%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(175, 6, 6);
+  text-decoration: none;
+  cursor: pointer;
+}
+ 
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fcf9ff;
+  margin: auto;
+  padding: 0;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+#modal_text
+{
+  margin-top: 0%;
+  color: #1a1919;
+  font-weight: lighter;
+  font: Fira Sans;
+}
+#modal_text_bold
+{ 
+  
+  margin-top: 0%;
+  color: #000000;
+  font-size: large;
+  font-weight: bold;
+  font: Fira Sans;
+}
+
+
+#modal_image
+{
+  margin-left: 10%;
+}
+
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+
+
+/* Shuffle.js stylings for buttons */
+
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 575px) {
+  * {
+    overflow-x: hidden;
+  }
+  .text-center-mobile {
+    text-align: center;
+  }
+
+  span {
+    font-size: 4vw;
+  }
+  #main {
+    background-image: url("../images/background/background_main_mob.jpg");
+    background-repeat: no-repeat;
+    background-position: center 45%;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 100vh;
+  }
+  .button-main {
+    border: 2px solid white;
+    border-radius: 3em;
+    font-size: 3vw;
+    font-weight: 600;
+    padding: 7px 10px;
+  }
+  .col-1 {
+    padding: 0%;
+  }
+  h1 {
+    font-size: 8.5vw;
+    font-weight: 700;
+    line-height: 0.9;
+  }
+
+  h2 {
+    font-size: 6.5vw;
+  }
+  h3 {
+    font-size: 4vw;
+  }
+  h4 {
+    font-size: 3vw;
+  }
+  p {
+    font-weight: 400;
+    font-size: 4vw;
+  }
+  a {
+    font-size: 4vw;
+  }
+
+  #main {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #main > .col-sm-10 {
+    position: relative;
+    top: -15%;
+  }
+  #main > .col-sm-10 > div > div {
+    margin: 3% auto;
+  }
+  #logo_ecell {
+    width: 40%;
+    height: auto;
+  }
+  #menu {
+    background-color: black;
+    width: 10vw;
+    height: auto;
+    margin: 1% 0% 0 0;
+  }
+  #social img {
+    width: 80%;
+    padding: 0%;
+    top: 50vh;
+  }
+  #nav-logo {
+    width: 25%;
+    height: auto;
+  }
+
+  .sidenav {
+    padding-top: 1em;
+  }
+  .sidenav a {
+    font-size: 5vw;
+  }
+  .sidenav .closebtn {
+    top: -0.2em;
+    font-size: 3em;
+  }
+
+  .sidenav img {
+    width: 15%;
+  }
+  #main-link p {
+    width: 80%;
+  }
+  #about .text-center h1 {
+    margin: 10% 0 0 0;
+    font-size: 8vw;
+  }
+  #about .text-center p {
+    width: 80%;
+    font-size: 4vw;
+    margin: 8% auto;
+  }
+  #about .carousel-item p {
+    font-size: 3.5vw;
+    width: 80%;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  #sip h1,
+  #sip p {
+    margin: 10% auto;
+  }
+
+  #sip .text-center p {
+    width: 80%;
+  }
+  #sip {
+    height: 100vh;
+  }
+  #courses {
+    height: 100vh;
+  }
+  #courses .text-center p {
+    width: 80%;
+  }
+  .carousel-caption {
+    margin-bottom: 65%;
+  }
+  #team {
+    height: auto;
+  }
+  #team a img,
+  #team_description a img {
+    width: 7vw;
+  }
+  #footer {
+    background-color: #111111;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "footer-item4"
+      "footer-item3"
+      "footer-item2"
+      "footer-item1"
+      "footer-item5";
+  }
+
+  #footer-item1 {
+    grid-area: footer-item1;
+  }
+  #footer-item1 .col-4 {
+    padding: 0;
+  }
+  #footer-item2 {
+    grid-area: footer-item2;
+    padding: 0%;
+  }
+  #footer-item2 img {
+    width: 10%;
+    height: auto;
+  }
+  #footer-item3 {
+    grid-area: footer-item3;
+    padding: 0;
+  }
+  #footer-item3 input[type="text"] {
+    background-color: lightgray;
+    color: black;
+    border: none;
+  }
+  #submit {
+    position: relative;
+    top: 7px;
+    right: 4px;
+  }
+  #footer-item3 input[type="text"]:active {
+    border: none;
+  }
+  #footer-item4 {
+    grid-area: footer-item4;
+  }
+  #footer-item4 img {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  #footer-item4 > h3 {
+    position: relative;
+    left: 0;
+  }
+  #footer-item5 {
+    grid-area: footer-item5;
+    height: fit-content;
+  }
+  /*other pages*/
+  #recruitments_description img {
+    width: 40vw;
+  }
+  .dark_button {
+    border: 2px solid black;
+  }
+  #recruitments_description p {
+    width: 80%;
+  }
+  #blog,
+  #podcast_main,
+  .sip_main,
+  #team,
+  #events-mob {
+    height: 100%;
+  }
+  #blog_description .card p {
+    font-size: 4vw;
+  }
+  #events-mob h1,
+  #events-mob p {
+    margin: 5% auto;
+  }
+  .events_2 {
+    background-image: url("../images/background/background_events_2.jpg");
+  }
+  .sip_main #header {
+    margin-left: 3.5%;
+  }
+  .sip_main .text-center h1 {
+    width: 80%;
+  }
+  .sip_main .text-center .text-left {
+    font-size: 3vw;
+  }
+  #course_container {
+    display: grid;
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6"
+      "c7"
+      "c8"
+      "c9"
+      "c10"
+      "c11"
+      "c12"
+      "c13"
+      "c14"
+      "c15"
+      "c16"
+      "c17"
+      "c18"
+      "c19"
+      "c20"
+      "c21"
+      "c22";
+  }
+  #c1 {
+    grid-area: c1;
+  }
+  #c2 {
+    grid-area: c2;
+  }
+  #c3 {
+    grid-area: c3;
+  }
+  #c4 {
+    grid-area: c4;
+  }
+  #c5 {
+    grid-area: c5;
+  }
+  #c6 {
+    grid-area: c6;
+  }
+  #courses_description .card p {
+    font-weight: 400;
+    font-size: 4vw;
+  }
+  #h-logo {
+    padding: 0 0 20% 0%;
+  }
+  #h-logo img {
+    width: 10vw;
+    height: auto;
+  }
+  #rec-1 {
+    background-image: url("../images/1.png");
+    background-repeat: no-repeat;
+    background-position: center 45%;
+    background-size: 70vw;
+    background-attachment: scroll;
+  }
+  #rec-3 {
+    background-image: url("../images/2.png");
+    background-repeat: no-repeat;
+    background-position: center 45%;
+    background-size: 80vw;
+    background-attachment: scroll;
+  }
+  #rec-2,
+  #rec-4 {
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 1px lightgrey;
+    margin-right: 50%;
+  }
+}
+/*height fixes for small phones and some iphones*/
+@media only screen and (max-height: 575px) {
+  #nav-logo {
+    width: 15%;
+    height: auto;
+  }
+  .sidenav {
+    height: 100vh;
+    position: fixed; /* Stay in place */
+    z-index: 100;
+  }
+  #main {
+    height: 100%;
+  }
+  #about {
+    height: 100%;
+  }
+  #sip {
+    height: 100%;
+  }
+  #courses {
+    height: 100%;
+  }
+  .events_1 {
+    height: 120vh;
+  }
+  .events_2 {
+    height: 120vh;
+  }
+  .events_3 {
+    height: 120vh;
+  }
+  #team {
+    height: 100%;
+  }
+  #team_main {
+    height: 100%;
+  }
+  .sip_main {
+    height: 100%;
+  }
+}
