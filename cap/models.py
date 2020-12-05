@@ -10,6 +10,11 @@ class CampusAmbassador(models.Model):
     email = models.EmailField(max_length=50, unique=True)
     college = models.CharField(max_length=40)
     branch = models.CharField(max_length=40)
+    year_of_study = models.CharField(max_length=30)
+    best_suited = models.CharField(max_length=400)
+    key_strengths = models.CharField(max_length=400)
+    anticipate_learning = models.CharField(max_length=400)
+    past_experience = models.CharField(max_length=400)
 
     def save(self, *args, **kwargs):
         self.name = self.name.lower()
