@@ -32,4 +32,4 @@ def cap_index(request):
         form = CampusAmbassadorForm()
         context['register_form'] = form
 
-    return render(request, 'cap.html', context=context)
+    return render(request, 'cap/index.html', context=context)
