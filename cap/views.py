@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 # Create your views here.
-def cap_index(request):
+def index(request):
 
     leaderboard_list = CampusAmbassador.objects.all().order_by('points')[:4]
     context = { 'leaderboad' : leaderboard_list, 'page_id' : 'cap-1' }
