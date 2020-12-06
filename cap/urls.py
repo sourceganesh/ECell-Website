@@ -3,5 +3,5 @@ from cap import views
 
 app_name = 'cap'
 urlpatterns = [
-    path('', views.cap_index, name="index")
+    path('', views.index, name="index")
 ]
