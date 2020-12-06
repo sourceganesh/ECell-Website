@@ -51,6 +51,7 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -65,13 +66,9 @@
         <header class="col-12">
           <!--navigation-->
           <nav id="header_main" class="text-right navbar">
-            <!--hamburger menu icon-->
-            <!--using this empty image as a fake navbar-brand to shift hamburger menu to the right-->
-            <img
-              src="
-"
-              alt=""
-            />
+            <a href="/" class="text-left"
+              ><img id="nav-logo" src="{% static 'images/logo_ecell.svg' %}" alt=""
+            /></a>
             <img
               id="menu"
               onclick="openNav()"
