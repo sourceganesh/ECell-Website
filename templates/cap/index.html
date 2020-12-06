@@ -1,8 +1,68 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block hero %}
+    <div class="col-12">
+        <h1>CAMPUS</h1>
+        <h1>AMBASSADOR</h1>
+        <h1>PROGRAM</h1>
+    </div>
+    <button class="button-cap btn hvr-grow" style="height: max-content;" type="button">
+        <a href="#cap-3" class="reg-cap">Register Here</a>
+    </button>
+{% endblock %}
 
 {% block body %}
 
-    {% if messages %}
+     <!-- SECTION-2:Incentives and Resposibilities -->
+     <section id="cap-2" class="container-fluid">
+      <div id="incentives">
+          <h2>Incentives</h2>
+          <p>
+          Real-World Experience – A Unique on-campus program offering
+          invaluable experience that nurtures the professional in you.
+          </p>
+          <p>
+          Enhance your Discoverability – Gain distinctive skills and experience 
+          to add to your resume which will get you closer to your dream job.
+          </p>
+          <p>
+          Build a Network – Join an exclusive club of budding professionals! 
+          Inspire others while developing lasting networks.
+          </p>
+       </div>
+       <div id="incentives-img">
+        <img src="{% static 'images/CAP/incentives.png' %}" alt="">
+       </div>
+       <div id="responsibilities-img">
+         <img src="{% static 'images/CAP/responsibilities.png' %}" alt="">
+       </div>
+       <div id="responsibilities">
+         <h2>Responsibilities</h2>
+         <p>
+          Real-World Experience – A Unique on-campus program offering
+          invaluable experience that nurtures the professional in you.
+          </p>
+          <p>
+          Enhance your Discoverability – Gain distinctive skills and experience 
+          to add to your resume which will get you closer to your dream job.
+          </p>
+          <p>
+          Build a Network – Join an exclusive club of budding professionals! 
+          Inspire others while developing lasting networks.
+          </p>
+      </div>
+
+
+</section>
+
+<form method="POST" action="{% url 'cap:index' %}"> 
+{% csrf_token %}
+ <!-- SECTION-3  FOR Sign-up Page-->
+ <section class="cap-3" id="cap-3">
+  <h1>Welcome Aboard!</h1>
+
+  {% if messages %}
         <div class="alert alert-success alert-dismissible">
         {% for message in messages %}
             <p>{{ message }}</p>
@@ -10,11 +70,95 @@
         </div>
     {% endif %}
 
+    <div class="login-form">
+        <div class="inputs">
+            <div class="input1">
+              <label for="username">Username</label>
+              {{ form.name }}
+            </div>
 
-    <form method="POST" class="post-form" action="{% url 'cap:index' %}">
-        {% csrf_token %}
-        {{ register_form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+            <div class="input2">
+              <label for="email">Email-Id</label>
+              {{ form.email }}
+            </div>
+
+            <div class="input3">
+                <label for="college">College Name</label>
+                {{ form.college }}
+            </div>     
+            
+            <div class="input11">
+              <label for="Branch">Branch</label>
+              {{ form.branch }}
+          </div>  
+        </div>
+
+      </form>
+      <div class="inputs">
+
+        <div class="input12">
+          <label for="roll_number">College Roll Number</label>
+          {{ form.roll_number }}
+        </div>  
+
+        <div class="input5">
+          <label for="phone-number">Phone Number</label>
+          {{ form.phone_number }}
+        </div>
+      
+        <div class="input6">
+          <label for="year-of-study">Year of Study:</label>
+          {{ form.year_of_study }}
+        </div>
+      </div>
+
+      <div class="inputs">
+
+        <div class="input7">
+            <label for="question1">Why do you think you are best suited for this role?</label><br>
+            {{ form.best_suited }}
+        </div>
+
+        <div class="input8">
+
+          <label for="question2">What do you think are your key strengths?</label><br>
+          {{ form.key_strengths }}
+
+        </div> 
+        <div class="input9">
+          <label for="question3">What expectations do you have from the club?</label><br>
+          {{ form.anticipate_learning }}
+        </div> 
+        <div class="input10">
+          <label for="question1">Any past experience related to this program?</label><br>
+          {{ form.past_experience }}
+        </div> 
+      </div>  
+
+    </div>
+  <button id="sign-up" type="submit" class="sign-up">Sign-Up</button>
+
+  
+</section>
+</form>
+
+<!-- SECTION-4:LEADERBOARD -->
+
+<section class="cap-4">
+  <div class="leaderboard">
+
+   <h1>LEADERBOARD</h1>
+
+   <img src="{% static 'images/CAP/leaderboard.png' %}" alt="">
+
+   <ul>
+      {% for ambassador in leaderboard %}
+        <li> <span class="name">{{ambassador.name}}</span>  
+        <span class="college">{{ambassador.college}}</span> <span class="points">{{ambassador.points}}</span></li>
+      {% endfor %}
+   </ul>
+
+  </div>   
+</section>
 
 {% endblock %}
