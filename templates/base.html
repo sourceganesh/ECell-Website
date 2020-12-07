@@ -84,27 +84,27 @@
                 onclick="closeNav()"
                 id="sidenav-name"
                 class="hvr-grow"
-                href="/"
+                href="{% url 'core:index' %}"
                 >E-CELL NITK</a
               >
               <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
-                href="{% url 'core:index' %}"
+                href="{% url 'core:index' %}#about"
                 >About</a
               >
               <!-- PTBA Recruitments -->
-              <a
+              <!-- <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 href="/recruitments.html" 
                 >Join Us</a
-              >
+              > -->
               <!-- PTBA SIP -->
               <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
-                href="/index.html#sip"
+                href="{% url 'core:index' %}#sip"
                 >SIP-2020</a
               >
 
@@ -112,7 +112,7 @@
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 target="_blank"
-                href="./courses.html"
+                href="{% url 'courses:index' %}"
                 >Learning Portal</a
               >
               <!-- PTBA Blog -->
@@ -120,38 +120,38 @@
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 target="_blank"
-                href="./blog.html"
+                href="{% url 'blogs:index' %}"
                 >Blogs</a
               >
               <!-- PTBA Podcasts -->
-              <a
+              <!-- <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 target="_blank"
                 href="./podcasts.html"
                 >Podcasts</a
-              >
+              > -->
               <!-- PTBA Events -->
               <a
                 onclick="closeNav()"
                 class="text-left hvr-grow d-none d-sm-block"
-                href="/index.html#events"
+                href="{% url 'core:index' %}#events"
                 >Events</a
               >
               <!-- PTBA Startups -->
               <a
                 onclick="closeNav()"
                 class="text-left hvr-grow d-sm-none"
-                href="/index.html#events-mob"
+                href="{% url 'core:index' %}#events-mob"
                 >Events</a
               >
-              <a
+              <!-- <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 target="_blank"
                 href="./team.html"
                 >Team</a
-              >
+              > -->
               <a
                 href="https://www.facebook.com/NitkEcell/"
                 class="text-left"

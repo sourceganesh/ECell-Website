@@ -1,14 +1,26 @@
 from django.shortcuts import render
 
 # Create your views here.
-def indexView(request):
-    return render(request,'courses/index.html')
+def index(request):
+
+    context = { 'page_id' : 'courses_main' }
+
+    return render(request,'courses/index.html', context=context)
 
 def entrepreneurship(request):
-    return render(request,'courses/entrepreneurship.html')
+
+    context = { 'page_id' : 'course_1_main' }
+    
+    return render(request,'courses/entrepreneurship.html', context=context)
 
 def finance(request):
-    return render(request,'courses/finance.html')
+
+    context = { 'page_id' : 'course_1_main' }
+
+    return render(request,'courses/finance.html', context=context)
 
 def cryptocurrency(request):
-    return render(request,'courses/cryptocurrency.html')
+
+    context = { 'page_id' : 'course_1_main' }
+
+    return render(request,'courses/cryptocurrency.html', context=context)
