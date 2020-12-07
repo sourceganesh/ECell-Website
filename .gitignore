@@ -130,3 +130,7 @@ dmypy.json
 .pyre/
 
 local.sh
+staticfiles
+staticfiles/*
+media
+media/*
