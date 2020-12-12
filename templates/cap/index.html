@@ -16,50 +16,48 @@
     <button class="button-cap btn hvr-grow" style="height: max-content;" type="button">
         <a href="#cap-3" class="reg-cap">Register Here</a>
     </button>
+    <button class="button-cap hvr-grow" style="height: max-content;" type="button">
+      <a href="https://drive.google.com/file/d/1Bk6jNbyLhMW0ERBbd8a3fj2JfjThOik8/view?usp=sharing" target="_blank" class="reg-cap">Know More</a>
+    </button>
 {% endblock %}
 
 {% block body %}
 
-     <!-- SECTION-2:Incentives and Resposibilities -->
-     <section id="cap-2" class="container-fluid">
-      <div id="incentives">
-          <h2>Incentives</h2>
-          <p>
-          Real-World Experience – A Unique on-campus program offering
-          invaluable experience that nurtures the professional in you.
-          </p>
-          <p>
-          Enhance your Discoverability – Gain distinctive skills and experience 
-          to add to your resume which will get you closer to your dream job.
-          </p>
-          <p>
-          Build a Network – Join an exclusive club of budding professionals! 
-          Inspire others while developing lasting networks.
-          </p>
-       </div>
-       <div id="incentives-img">
-        <img src="{% static 'images/CAP/incentives.png' %}" alt="">
-       </div>
-       <div id="responsibilities-img">
-         <img src="{% static 'images/CAP/responsibilities.png' %}" alt="">
-       </div>
-       <div id="responsibilities">
-         <h2>Responsibilities</h2>
-         <p>
-          Real-World Experience – A Unique on-campus program offering
-          invaluable experience that nurtures the professional in you.
-          </p>
-          <p>
-          Enhance your Discoverability – Gain distinctive skills and experience 
-          to add to your resume which will get you closer to your dream job.
-          </p>
-          <p>
-          Build a Network – Join an exclusive club of budding professionals! 
-          Inspire others while developing lasting networks.
-          </p>
-      </div>
-
-
+ <!-- SECTION-2:Incentives and Resposibilities -->
+ <section id="cap-2" class="container-fluid">
+  <div class="row">
+   <div id="incentives" class="text-center mt-5 col-12 col-sm-6 order-2 order-sm-1">
+     <h2>Incentives</h2>
+     <p>
+       Certificate of Appreciation
+     </p>
+     <p>
+       Internship in NITK Startups
+     </p>
+     <p>
+       Free Workshop and Webinars
+     </p>
+   </div>
+   <div id="incentives-img" class="text-center col-12 col-sm-6 order-1 order-sm-2">
+   <img src="{% static 'images/CAP/background_cap_s2_1.svg' %}" alt="">
+   </div>
+   <div id="responsibilities-img" class="text-center col-12 col-sm-6 order-3">
+     <img src="{% static 'images/CAP/background_cap_s2_2.svg' %}" alt="">
+   </div>
+   <div id="responsibilities" class="text-center mt-5 col-12 col-sm-6 order-4">
+     <h2>Responsibilities</h2>
+     <p>
+     Fee Waiver for exclusive students
+     </p>
+     <p>
+       Get featured in magazine and social media
+     </p>
+     <p>
+       Free Goodies
+     </p>
+   </div>
+  </div>
+   
 </section>
 
 <form method="POST" action="{% url 'cap:index' %}"> 
@@ -77,7 +75,7 @@
     {% endif %}
 
     <div class="login-form">
-        <div class="inputs">
+        <div class="inputs text-center">
             <div class="input1">
               <label for="username">Username</label>
               {{ form.name }}

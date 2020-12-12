@@ -17,8 +17,8 @@ class CampusAmbassadorForm(forms.ModelForm):
         model = CampusAmbassador
         exclude = ['points', 'year_of_study']
         widgets = {
-            'best_suited': forms.Textarea(attrs={'rows':3, 'cols':50}),
-            'key_strengths': forms.Textarea(attrs={'rows':3, 'cols':50}),
-            'anticipate_learning': forms.Textarea(attrs={'rows':3, 'cols':50}),
-            'past_experience': forms.Textarea(attrs={'rows':3, 'cols':50}),
+            'best_suited': forms.Textarea(attrs={'rows':3, 'cols':40}),
+            'key_strengths': forms.Textarea(attrs={'rows':3, 'cols':40}),
+            'anticipate_learning': forms.Textarea(attrs={'rows':3, 'cols':40}),
+            'past_experience': forms.Textarea(attrs={'rows':3, 'cols':40}),
         }
