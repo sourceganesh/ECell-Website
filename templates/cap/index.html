@@ -22,9 +22,8 @@
 {% endblock %}
 
 {% block body %}
-
- <!-- SECTION-2:Incentives and Resposibilities -->
- <section id="cap-2" class="container-fluid">
+<!-- SECTION-2:Incentives and Resposibilities -->
+<section id="cap-2" class="container-fluid">
   <div class="row">
    <div id="incentives" class="text-center mt-5 col-12 col-sm-6 order-2 order-sm-1">
      <h2>Incentives</h2>
@@ -60,7 +59,8 @@
    
 </section>
 
-<form method="POST" action="{% url 'cap:index' %}"> 
+
+<!-- <form method="POST" action="{% url 'cap:index' %}">  -->
 {% csrf_token %}
  <!-- SECTION-3  FOR Sign-up Page-->
  <section class="cap-3" id="cap-3">
@@ -91,16 +91,16 @@
                 {{ form.college }}
             </div>     
             
-            <div class="input11">
+            <div class="input1">
               <label for="Branch">Branch</label>
               {{ form.branch }}
-          </div>  
+            </div>  
         </div>
 
       </form>
       <div class="inputs">
 
-        <div class="input12">
+        <div class="input1">
           <label for="roll_number">College Roll Number</label>
           {{ form.roll_number }}
         </div>  
@@ -144,10 +144,10 @@
 
   
 </section>
-</form>
+<!-- </form> -->
 
 <!-- SECTION-4:LEADERBOARD -->
-
+{% comment %}
 <section class="cap-4">
   <div class="leaderboard">
 
@@ -164,5 +164,7 @@
 
   </div>   
 </section>
+
+{% endcomment %}
 
 {% endblock %}
