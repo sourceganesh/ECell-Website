@@ -123,6 +123,13 @@
                 href="{% url 'blogs:index' %}"
                 >Blogs</a
               >
+              <a
+                onclick="closeNav()"
+                class="text-left hvr-grow"
+                target="_blank"
+                href="{% url 'podcasts:index' %}"
+                >Podcasts</a
+              >
               <!-- PTBA Podcasts -->
               <!-- <a
                 onclick="closeNav()"
@@ -137,6 +144,12 @@
                 class="text-left hvr-grow d-none d-sm-block"
                 href="{% url 'core:index' %}#events"
                 >Events</a
+              >
+              <a
+                onclick="closeNav()"
+                class="text-left hvr-grow d-none d-sm-block"
+                href="{% url 'team:index' %}"
+                >Team</a
               >
               <!-- PTBA Startups -->
               <a
@@ -232,7 +245,7 @@
           </div>
           <div id="footer-item1-2">
             <h3>DISCOVER</h3>
-            <a href="./podcasts.html">
+            <a href="{% url 'podcasts:index' %}">
               <p>Podcasts</p>
             </a>
             <a class="d-none d-sm-block" href="./index.html#events">
@@ -241,7 +254,7 @@
             <a class="d-sm-none" href="./index.html#events-mob">
               <p>Events</p>
             </a>
-            <a href="./team.html">
+            <a href="{% url 'team:index' %}">
               <p>Team</p>
             </a>
           </div>
