@@ -139,9 +139,9 @@
             data-aos-duration="1000"
           >
             <p class="my-0 mt-sm-3">
-              Listen to our Podcast on all thing business!
+              Become an official representative of E-Cell NITK, apply to our Campus Ambassador Program
             </p>
-            <a href="/podcasts.html">
+            <a href="{% url 'cap:index' %}">
               <button class="button-main my-3 hvr-grow" type="button">
                 LISTEN NOW
               </button>
@@ -263,7 +263,7 @@
             business acumen and decision making while also catering to the
             interests of all the business enthusiasts out there.
           </p>
-          <a href="./courses.html"
+          <a href="{% url 'courses:index' %}"
             ><button
               class="button-main my-sm-3 hvr-grow mt-3 mb-5 my-sm-0"
               type="button"
@@ -620,7 +620,7 @@
           data-aos-delay="1000"
           data-aos-duration="500"
         >
-          <a href="./team.html" target="_blank">
+          <a href="{% url 'team:index' %}" target="_blank">
             <button
               class="button-main text-dark my-sm-3 hvr-grow"
               style="border: 2px solid black"

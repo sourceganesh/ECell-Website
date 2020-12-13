@@ -60,91 +60,89 @@
 </section>
 
 
-<!-- <form method="POST" action="{% url 'cap:index' %}">  -->
-{% csrf_token %}
- <!-- SECTION-3  FOR Sign-up Page-->
- <section class="cap-3" id="cap-3">
-  <h1>Welcome Aboard!</h1>
+<form method="POST" action="{% url 'cap:index' %}"> 
+  {% csrf_token %}
+  <!-- SECTION-3  FOR Sign-up Page-->
+  <section class="cap-3" id="cap-3">
+    <h1>Welcome Aboard!</h1>
 
-  {% if messages %}
-        <div class="alert alert-success alert-dismissible">
-        {% for message in messages %}
-            <p>{{ message }}</p>
-        {% endfor %}
-        </div>
-    {% endif %}
+    {% if messages %}
+          <div class="alert alert-success alert-dismissible">
+          {% for message in messages %}
+              <p>{{ message }}</p>
+          {% endfor %}
+          </div>
+      {% endif %}
 
-    <div class="login-form">
+      <div class="login-form">
+          <div class="inputs text-center">
+              <div class="input1">
+                <label for="username">Username</label>
+                {{ form.name }}
+              </div>
+
+              <div class="input2">
+                <label for="email">Email-Id</label>
+                {{ form.email }}
+              </div>
+
+              <div class="input3">
+                  <label for="college">College Name</label>
+                  {{ form.college }}
+              </div>     
+              
+              <div class="input1">
+                <label for="Branch">Branch</label>
+                {{ form.branch }}
+              </div>  
+          </div>
+
+        </form>
         <div class="inputs text-center">
-            <div class="input1">
-              <label for="username">Username</label>
-              {{ form.name }}
-            </div>
 
-            <div class="input2">
-              <label for="email">Email-Id</label>
-              {{ form.email }}
-            </div>
+          <div class="input1">
+            <label for="roll_number">College Roll Number</label>
+            {{ form.roll_number }}
+          </div>  
 
-            <div class="input3">
-                <label for="college">College Name</label>
-                {{ form.college }}
-            </div>     
-            
-            <div class="input1">
-              <label for="Branch">Branch</label>
-              {{ form.branch }}
-            </div>  
+          <div class="input5">
+            <label for="phone-number">Phone Number</label>
+            {{ form.phone_number }}
+          </div>
+        
+          <div class="input6">
+            <label for="year-of-study">Year of Study:</label>
+            {{ form.year_of_study }}
+          </div>
         </div>
 
-      </form>
-      <div class="inputs">
+        <div class="inputs text-center">
 
-        <div class="input1">
-          <label for="roll_number">College Roll Number</label>
-          {{ form.roll_number }}
+          <div class="input7">
+              <label for="question1">Why do you think you are best suited for this role?</label><br>
+              {{ form.best_suited }}
+          </div>
+
+          <div class="input8">
+            <label for="question2">What do you think are your key strengths?</label><br>
+            {{ form.key_strengths }}
+          </div> 
+          <div class="input9">
+            <label for="question3">What expectations do you have from this program?</label><br>
+            {{ form.anticipate_learning }}
+          </div> 
+          <div class="input10">
+            <label for="question1">Any past experience related to this program?</label><br>
+            {{ form.past_experience }}
+          </div> 
         </div>  
 
-        <div class="input5">
-          <label for="phone-number">Phone Number</label>
-          {{ form.phone_number }}
-        </div>
-      
-        <div class="input6">
-          <label for="year-of-study">Year of Study:</label>
-          {{ form.year_of_study }}
-        </div>
       </div>
+    <button id="sign-up" type="submit" class="sign-up">Sign-Up</button>
 
-      <div class="inputs">
-
-        <div class="input7">
-            <label for="question1">Why do you think you are best suited for this role?</label><br>
-            {{ form.best_suited }}
-        </div>
-
-        <div class="input8">
-
-          <label for="question2">What do you think are your key strengths?</label><br>
-          {{ form.key_strengths }}
-
-        </div> 
-        <div class="input9">
-          <label for="question3">What expectations do you have from the club?</label><br>
-          {{ form.anticipate_learning }}
-        </div> 
-        <div class="input10">
-          <label for="question1">Any past experience related to this program?</label><br>
-          {{ form.past_experience }}
-        </div> 
-      </div>  
-
-    </div>
-  <button id="sign-up" type="submit" class="sign-up">Sign-Up</button>
-
-  
-</section>
-<!-- </form> -->
+    
+  </section>
+</form>
 
 <!-- SECTION-4:LEADERBOARD -->
 {% comment %}

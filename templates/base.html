@@ -105,13 +105,13 @@
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 href="{% url 'core:index' %}"
-                >SIP-2020</a
+                >SIP</a
               >
               <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 href="{% url 'cap:index' %}#sip"
-                >CAP-2020</a
+                >CAP</a
               >
               <a
                 onclick="closeNav()"
@@ -133,7 +133,7 @@
                 class="text-left hvr-grow"
                 target="_blank"
                 href="{% url 'podcasts:index' %}"
-                >Podcasts</a
+                >Podcast</a
               >
               <!-- PTBA Podcasts -->
               <!-- <a
@@ -238,20 +238,20 @@
         <div id="footer-item1">
           <div id="footer-item1-1">
             <h3>EXPLORE</h3>
-            <a href="./index.html">
+            <a href="{% url 'core:index' %}">
               <p>Home</p>
             </a>
-            <a href="./index.html#about">
+            <a href="{% url 'core:index' %}#about">
               <p>About Us</p>
             </a>
-            <a href="./blog.html">
+            <a href="{% url 'blogs:index' %}">
               <p>Blog</p>
             </a>
           </div>
           <div id="footer-item1-2">
             <h3>DISCOVER</h3>
             <a href="{% url 'podcasts:index' %}">
-              <p>Podcasts</p>
+              <p>Podcast</p>
             </a>
             <a class="d-none d-sm-block" href="./index.html#events">
               <p>Events</p>
@@ -265,10 +265,10 @@
           </div>
           <div id="footer-item1-3">
             <h3>INITIATIVES</h3>
-            <a href="./startup-internship-application.html">
-              <p>SIP</p>
+            <a href="{% url 'cap:index' %}">
+              <p>CAP</p>
             </a>
-            <a href="./index.html#courses">
+            <a href="{% url 'courses:index' %}">
               <p>Courses</p>
             </a>
           </div>
@@ -328,7 +328,7 @@
           </form>
         </div>
         <div id="footer-item4" class="text-center mt-5">
-          <a href="./index.html"
+          <a href="{% url 'core:index' %}"
             ><img src="{% static 'images/logo_ecell.svg' %}" alt=""
           /></a>
           <h3>E-CELL NITK</h3>
