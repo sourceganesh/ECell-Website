@@ -3,5 +3,5 @@ from startups import views
 
 app_name = 'startups'
 urlpatterns = [
-    path('', views.indexView, name='index'),
+    path('', views.index, name='index'),
 ]
