@@ -135,14 +135,13 @@
                 href="{% url 'podcasts:index' %}"
                 >Podcast</a
               >
-              <!-- PTBA Podcasts -->
-              <!-- <a
+              <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
                 target="_blank"
-                href="./podcasts.html"
-                >Podcasts</a
-              > -->
+                href="{% url 'startups:index' %}"
+                >Startups</a
+              >
               <!-- PTBA Events -->
               <a
                 onclick="closeNav()"
@@ -270,6 +269,9 @@
             </a>
             <a href="{% url 'courses:index' %}">
               <p>Courses</p>
+            </a>
+            <a href="{% url 'startups:index' %}">
+              <p>Startups</p>
             </a>
           </div>
         </div>
