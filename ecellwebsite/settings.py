@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'blogs',
     'courses',
     'startups',
+    'podcasts',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+try:
+    from ecellwebsite.local_settings import *
+except ImportError:
+    pass
