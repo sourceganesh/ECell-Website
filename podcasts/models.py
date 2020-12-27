@@ -6,5 +6,7 @@ class Podcast(models.Model):
     description         = models.CharField(max_length=600)
     spotify_smug        = models.CharField(max_length=30)
     youtube_link        = models.CharField(max_length=150)
-    image               = models.ImageField(upload_to = 'podcasts/')
-    pass
+    podcast_image       = models.ImageField(upload_to = 'podcasts/')
+    
+    def __str__(self):
+        return self.name
