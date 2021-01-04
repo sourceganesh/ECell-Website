@@ -257,10 +257,10 @@
             <a href="{% url 'podcasts:index' %}">
               <p>Podcast</p>
             </a>
-            <a class="d-none d-sm-block" href="./index.html#events">
+            <a class="d-none d-sm-block" href="{% url 'core:index' %}#events">
               <p>Events</p>
             </a>
-            <a class="d-sm-none" href="./index.html#events-mob">
+            <a class="d-sm-none" href="{% url 'core:index' %}#events-mob">
               <p>Events</p>
             </a>
             <a href="{% url 'team:index' %}">
