@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_meta %}
+  <title>E-Cell NITK | Broadcast</title>
+  <meta name="description" content="" />
+{% endblock  %}
+
+{% block hero %}
+  <div class="col-12 mb-5 text-center">
+    <h1 style="overflow-y: hidden">BROADCAST</h1>
+    <p>
+      Broadcast is an initiative to help anybody understand the business
+      side of the world from marketing to operations by aggregating
+      content by trusted sources from around the world to promote an
+      entrepreneurial spirit for the coming generation.
+    </p>
+  </div>
+{% endblock %}
+
+{% block body %}
+<section id="blog_description" class="container-fluid">
+  <div class="row">
+    {% for broadcast in all_broadcasts %}
+    <div class="col-xl-6 col-12 text-center p-3">
+      <iframe
+        width="90%"
+        height="315"
+        src="{{ broadcast.youtube_link }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p class="text-dark">
+        {{ broadcast.name }}
+      </p>
+    </div>
+    {% endfor %}
+    <!--
+    <div class="col-xl-6 col-12 text-center p-3">
+      <iframe
+        width="90%"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/kW_q5Ihmjnk"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p class="text-dark">TITLE: SOMETHING</p>
+    </div>
+    <div class="col-xl-6 col-12 text-center p-3">
+      <iframe
+        width="90%"
+        height="315"
+        src="https://www.youtube.com/embed/RyAbwF_4ehg"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p class="text-dark">TITLE: SOMETHING</p>
+    </div>
+    <div class="col-xl-6 col-12 text-center p-3">
+      <iframe
+        width="90%"
+        height="315"
+        src="https://www.youtube.com/embed/RyAbwF_4ehg"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p class="text-dark">TITLE: SOMETHING</p>
+    </div>-->
+  </div>
+</section>
+
+{% endblock %}
