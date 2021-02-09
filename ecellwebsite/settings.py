@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'startups',
     'podcasts',
     'import_export',
+    'broadcast',
 ]
 
 MIDDLEWARE = [
