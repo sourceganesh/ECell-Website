@@ -3,20 +3,7 @@
 
 {% block title_meta %}
     <!--title & description-->
-<title>E-Cell NITK | Learning Portal</title>
-    <meta name="description" content="" />
-    <link
-      rel="icon"
-      href="./src/images/favicon.ico"
-      type="image/gif"
-      sizes="16x16"
-    />
-    <link rel="apple-touch-icon" href="./src/images/apple-touch-icon.png" />
-
-    <!--seo tags-->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-Cell NITK | Learning Portal</title>
 {% endblock %}
 {% block hero %}
   <div class="row">
@@ -37,7 +24,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <div class="card text-center">
         <img
-          src="../static/images/entreprenurship/cover.jpg"
+          src="{% static 'images/entreprenurship/cover.jpg' %}"
           class="card-img-top"
           alt="..."
           style="height: 200px"
@@ -47,7 +34,7 @@
           <p class="card-text">
             Learn the necessary skills to boost your startup idea!
           </p>
-          <a href="./entrepreneurship" class="btn btn-dark"
+          <a href="{% url 'courses:entrepreneurship' %}" class="btn btn-dark"
             >EXPLORE</a
           >
         </div>
@@ -56,7 +43,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <div class="card text-center">
         <img
-          src="../static/images/finance/cover.jpg"
+          src="{% static 'images/finance/cover.jpg' %}"
           class="card-img-top"
           alt="..."
           style="height: 200px"
@@ -66,7 +53,7 @@
           <p class="card-text">
             Dive deeper and explore the world of Finance!
           </p>
-          <a href="./finance" class="btn btn-dark">EXPLORE</a>
+          <a href="{% url 'courses:finance' %}" class="btn btn-dark">EXPLORE</a>
         </div>
       </div>
     </div>
@@ -74,7 +61,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <div class="card text-center">
         <img
-          src="../static/images/crypto/cover.jpg"
+          src="{% static 'images/crypto/cover.jpg' %}"
           class="card-img-top"
           alt="..."
           style="height: 200px"
@@ -84,7 +71,7 @@
           <p class="card-text">
             Study about the applications of this new technology!
           </p>
-          <a href="./cryptocurrency" class="btn btn-dark"
+          <a href="{% url 'courses:cryptocurrency' %}" class="btn btn-dark"
             >EXPLORE</a
           >
         </div>
@@ -93,7 +80,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <div class="card text-center">
         <img
-          src="{% static '/images/productManage/cover.png' %}"
+          src="{% static 'images/productManage/cover.png' %}"
           class="card-img-top"
           alt="..."
           style="height: 200px"
@@ -103,7 +90,7 @@
           <p class="card-text">
             Find out how you can build and manage great products!
           </p>
-          <a href="./productManagement" class="btn btn-dark"
+          <a href="{% url 'courses:productManagement' %}" class="btn btn-dark"
             >EXPLORE</a
           >
         </div>
@@ -122,7 +109,7 @@
           <p class="card-text">
             Dive deeper and scale your startup now!
           </p>
-          <a href="./entrepreneurship2" class="btn btn-dark"
+          <a href="{% url 'courses:entrepreneurship2' %}" class="btn btn-dark"
             >EXPLORE</a
           >
         </div>
