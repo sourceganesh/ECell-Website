@@ -36,3 +36,15 @@ def entrepreneurship2(request):
     context = { 'page_id' : 'course_1_main' }
 
     return render(request,'courses/entrepreneurship2.html', context=context)
+
+def marketing(request):
+
+    context = { 'page_id' : 'course_1_main' }
+
+    return render(request,'courses/marketing.html', context=context)
+
+def economics(request):
+
+    context = { 'page_id' : 'course_1_main' }
+
+    return render(request,'courses/economics.html', context=context)

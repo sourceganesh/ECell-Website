@@ -9,4 +9,6 @@ urlpatterns = [
     path('cryptocurrency/', views.cryptocurrency, name="cryptocurrency"),
     path('productManagement/', views.productManagement, name="productManagement"),
     path('entrepreneurship2/', views.entrepreneurship2, name="entrepreneurship2"),
+    path('marketing/', views.marketing, name="marketing"),
+    path('economics/', views.economics, name="economics"),
 ]
