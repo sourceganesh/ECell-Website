@@ -160,6 +160,12 @@
                 href="{% url 'team:index' %}"
                 >Team</a
               >
+              <a
+                onclick="closeNav()"
+                class="text-left hvr-grow d-none d-sm-block"
+                href="{% url 'recruitment:index' %}"
+                >Recruitment</a
+              >
               <!-- PTBA Startups -->
               <a
                 onclick="closeNav()"
@@ -265,6 +271,9 @@
             </a>
             <a href="{% url 'team:index' %}">
               <p>Team</p>
+            </a>
+            <a href="{% url 'recruitment:index' %}">
+              <p>Recruitment</p>
             </a>
           </div>
           <div id="footer-item1-3">
