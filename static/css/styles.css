@@ -682,6 +682,16 @@ p {
   color: white;
   padding: 5px 10px;
   border-radius: 20px;
+  
+}
+
+.rec-form-btn.rec-index{
+  transform: scale(0.9);
+}
+
+.rec-form-btn.rec-index:hover{
+  color:white;
+  transform: scale(1);
 }
 
 /*CSS for startups page*/

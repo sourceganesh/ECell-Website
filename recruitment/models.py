@@ -9,6 +9,7 @@ class ContactInfo(models.Model):
     
     class meta:
         abstract = True
+        
 
 class ManagementTeamRecs(ContactInfo):
     answer1 = models.TextField(max_length= 3000)
@@ -18,6 +19,9 @@ class ManagementTeamRecs(ContactInfo):
     media = models.BooleanField(default=False)
     web = models.BooleanField( default=False)
 
+    def __str__(self):
+        return self.name + ' - ' +self.roll_number 
+
 class MediaTeamRecs(ContactInfo):
     area_of_interest = models.CharField(max_length = 200)
     skills = models.CharField(max_length = 200)
@@ -26,6 +30,10 @@ class MediaTeamRecs(ContactInfo):
     answer3 = models.TextField(max_length= 3000)
     other_interests = models.CharField(max_length =200, default = "-")
     other_skills = models.CharField(max_length =200, default = "-")
+
+    def __str__(self):
+        return self.name + ' - ' +self.roll_number 
+
 class WebTeamRecs(ContactInfo):
     interest = (("Frontend",1),("Backend",2),("Both",0))
     area_of_interest = models.IntegerField(choices = interest)
@@ -34,3 +42,6 @@ class WebTeamRecs(ContactInfo):
     answer2 = models.TextField(max_length= 3000)
     answer3 = models.TextField(max_length= 3000)
     other_skills = models.CharField(max_length =200, default = "-")
+
+    def __str__(self):
+        return self.name + ' - ' +self.roll_number  
