@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_meta %}
+<title>E-Cell NITK | Recruitments </title>
+<meta name="description" content="" />
+{% endblock %}
+
+{% block body %}
+<section id="recruitments-form" class="container-fluid">
+<div class="row justify-content-center">
+  <div class="rec-form col-md-7 col-sm-10 col-xs-11 bg-white mt-3 mb-5 py-2">
+    
+    {% if success_message %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{success_message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+    
+    {% if error_message %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{error_message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+
+    <h2 class="text-center font-weight-bold mt-4 mb-3 py-2">E-Cell Recruitments</h2>
+    <h3 class="text-center font-weight-bold mt-2 mb-4 py-2">Media and Publicity Team</h3>
+    <h5 class="text-dark d-flex justify-content-center mx-5"><b>Round 1</b></h5>
+    <div class="rec-form-box mx-md-5 mx-sm-2">
+      <p>Please fill in the details and be a step closer to joining our team!</p>
+      <p>Registration Deadline: <br><br>
+
+        For further information, contact: <br>
+        Naveen: +91 9500571056<br>
+        Yashas: +91 8105454687<br>
+        Reetesh: +91 8971071692</p><br>
+      <form action="/recruitment/media" method="POST">
+        {% csrf_token %}
+        <div class="rec-input mb-3 px-3">
+          <label for="name" class="font-weight-bold">Full Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="rec-input mb-3 px-3">
+          <label for="email" class="font-weight-bold">Email ID (EDU account)</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="rec-input mb-3 px-3">
+          <label for="text" class="font-weight-bold">Contact Number (Whatsapp)</label>
+          <input type="text" name="phone" maxlength="10">
+        </div>
+        <div class="rec-input mb-5 px-3">
+          <label for="rollnum" class="font-weight-bold">Roll Number</label>
+          <input type="text" name="roll_number" maxlength="8">
+        </div>
+        <p>
+          Please answer the following questions if you are interested in joining the Media and Publicity Team!
+        </p>
+        <div class="rec-input-radio mb-3">
+          <p>Areas of interest</p>
+          <input type="checkbox" name="digital_marketing" value="1">
+          <label for="digital_marketing">Digital Marketing</label><br>
+          <input type="checkbox" name="poster_creation" value="1">
+          <label for="poster_creation">Poster Creation</label><br>
+          <input type="checkbox" name="social_media_content" value="1">
+          <label for="social_media_content">Social Media Content</label><br>
+          <input type="checkbox" name="digital_art" value="1">
+          <label for="digital_art">Digital Art</label><br>
+          <input type="checkbox" name="videography" value="1">
+          <label for="videography">Videography and Editing</label><br>
+          <input type="checkbox" name="audio_editing" value="1">
+          <label for="audio_editing">Audio Editing</label> <br>
+          <label for="other_interests">Other</label>
+          <input type="text" name="other_interests">
+        </div>
+        <div class="rec-input-radio mb-3">
+          <p>Skills Possessed</p>
+          <input type="checkbox" name="illustrator" value="1">
+          <label for="illustrator">Illustrator</label><br>
+          <input type="checkbox" name="photoshop" value="1">
+          <label for="photoshop">Photoshop</label><br>
+          <input type="checkbox" name="after_effects" value="1">
+          <label for="after_effects">After Effects</label><br>
+          <input type="checkbox" name="premier_pro" value="1">
+          <label for="premier_pro">Premier Pro</label><br>
+          <input type="checkbox" name="canva" value="1">
+          <label for="canva">Canva</label><br>
+          <input type="checkbox" name="none" value="1">
+          <label for="none_skills">Not yet, but willing to learn!</label><br>
+          <label for="other_skills">Other</label>
+          <input type="text" name="other_skills">
+        </div>
+        <div class="rec-input-textarea mb-3 mt-5">
+          <label for="answer1" class="font-weight-bold">
+            Please attach a Drive link covering your Portfolio of previous work (If any)
+          </label>
+          <textarea id="" name="answer1" rows="6"></textarea>
+        </div>
+        <div class="rec-input-textarea mb-3">
+          <label for="answer2" class="font-weight-bold">
+            Explain how you could contribute and learn at E-Cell Media and Publicity Team.
+          </label>
+          <textarea id="" name="answer2" rows="6"></textarea>
+        </div>
+        <div class="rec-input-textarea mb-3">
+          <label for="answer3" class="font-weight-bold">
+            E-Cell NITK wants to start a new series of posts for our Instagram account. What are some unique ideas that
+            you think would work?
+          </label>
+          <textarea id="" name="answer3" rows="6"></textarea>
+        </div>
+        <div class="text-center">
+          <button class="rec-form-btn hvr-grow my-5 px-3" type="submit">Submit</button>
+        </div>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+{% endblock %}

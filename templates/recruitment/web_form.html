@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_meta %}
+<title>E-Cell NITK | Recruitment </title>
+<meta name="description" content="" />
+{% endblock %}
+
+
+{% block body%}
+<section id="recruitments-form" class="container-fluid">
+<div class="row justify-content-center">
+  <div class="rec-form col-md-7 col-sm-10 col-xs-11 bg-white mt-3 mb-5 py-2">
+    {% if success_message %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{success_message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+    
+    {% if error_message %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{error_message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+
+    <h2 class="text-center font-weight-bold mt-4 mb-3 py-2">E-Cell Recruitments</h2>
+    <h3 class="text-center font-weight-bold mt-2 mb-4 py-2">Website Team</h3>
+    <h5 class="text-dark d-flex justify-content-center mx-5"><b>Round 1</b></h5>
+    <div class="rec-form-box mx-md-5 mx-sm-2">
+      <p>Please fill in the details and be a step closer to joining our team!</p>
+      <p>Registration Deadline: <br><br>
+
+        For further information, contact: <br>
+        Ganesh: +91 9900512512<br>
+        Rohit Handique: +91 8473926299</p><br>
+    
+      <form action="/recruitment/web" method="POST">
+        {% csrf_token %}
+        <div class="rec-input mb-3 px-3">
+          <label for="name" class="font-weight-bold">Full Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="rec-input mb-3 px-3">
+          <label for="email" class="font-weight-bold">Email ID (EDU account)</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="rec-input mb-3 px-3">
+          <label for="text" class="font-weight-bold">Contact Number (Whatsapp)</label>
+          <input type="text" name="phone" maxlength="10">
+        </div>
+        <div class="rec-input mb-5 px-3">
+          <label for="rollnum" class="font-weight-bold">Roll Number</label>
+          <input type="text" name="roll_number" maxlength="8">
+        </div>
+        <p>
+          Please answer the following questions if you are interested in joining the Website Team!<br>
+          Check out our website at
+          <a class="text-dark" href="https://ecell.nitk.ac.in">https://ecell.nitk.ac.in</a>
+        </p>
+        <div class="rec-input-radio mb-3">
+          <p>Areas of interest</p>
+          <input type="radio" name="interest" value=1>
+          <label for="frontend">Frontend</label><br>
+          <input type="radio" name="interest" value=2>
+          <label for="backend">Backend</label><br>
+          <input type="radio" name="interest" value=0>
+          <label for="both">Both</label><br>
+        </div>
+        <div class="rec-input-radio mb-3">
+          <p>Skills Possessed</p>
+          <input type="checkbox" name="html_css" value="1">
+          <label for="htmlcss">HTML & CSS</label><br>
+          <input type="checkbox" name="javascript" value="1">
+          <label for="javascript">JavaScript</label><br>
+          <input type="checkbox" name="git" value="git">
+          <label for="git">Git</label><br>
+          <input type="checkbox" name="react_angular" value="1">
+          <label for="react_angular">React or Angular</label><br>
+          <input type="checkbox" name="django_or_node" value="1">
+          <label for="django_or_node">Django or Node</label><br>
+          <input type="checkbox" name="ui_ux" value="1">
+          <label for="ui_ux">UI/UX</label> <br>
+          <label for="other">Other</label>
+          <input type="text" name="other_skills">
+        </div>
+        <div class="rec-input-textarea mb-3 mt-5">
+          <label for="answer1" class="font-weight-bold">
+            Please attach your Github link and/or a Drive link with your previous projects.
+          </label>
+          <textarea id="" name="answer1" rows="6"></textarea>
+        </div>
+        <div class="rec-input-textarea mb-3">
+          <label for="answer2" class="font-weight-bold">
+            Why do you want to join the E-Cell Website Team?
+          </label>
+          <textarea id="" name="answer2" rows="6"></textarea>
+        </div>
+        <div class="rec-input-textarea mb-3">
+          <label for="answer3" class="font-weight-bold">
+            If you had to change any one thing in our website, what would that be?
+          </label>
+          <textarea id="" name="answer3" rows="6"></textarea>
+        </div>
+        <div class="text-center">
+          <button class="rec-form-btn hvr-grow my-5 px-3" type="submit">Submit</button>
+        </div>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}
