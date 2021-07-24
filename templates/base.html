@@ -143,11 +143,18 @@
               <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
+                href="{% url 'recruitment:index' %}"
+                >Recruitment</a
+              >
+              <a
+                onclick="closeNav()"
+                class="text-left hvr-grow"
                 target="_blank"
                 href="{% url 'startups:index' %}"
                 >Startups Hub</a
               >
               <!-- PTBA Events -->
+              {% comment %}
               <a
                 onclick="closeNav()"
                 class="text-left hvr-grow d-none d-sm-block"
@@ -160,12 +167,6 @@
                 href="{% url 'team:index' %}"
                 >Team</a
               >
-              <a
-                onclick="closeNav()"
-                class="text-left hvr-grow d-none d-sm-block"
-                href="{% url 'recruitment:index' %}"
-                >Recruitment</a
-              >
               <!-- PTBA Startups -->
               <a
                 onclick="closeNav()"
@@ -173,6 +174,7 @@
                 href="{% url 'core:index' %}#events-mob"
                 >Events</a
               >
+              {% endcomment %}
               <!-- <a
                 onclick="closeNav()"
                 class="text-left hvr-grow"
