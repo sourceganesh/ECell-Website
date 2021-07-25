@@ -19,10 +19,10 @@ def management_form(request):
         if request.POST['content_writing']=="yes":
             m.content_writing=True
         
-        if request.POST['web']:
+        if request.POST.get('web', None):
             m.web=True
         
-        if request.POST['media']:
+        if request.POST.get('media', None):
             m.media=True
         
         m.save()
