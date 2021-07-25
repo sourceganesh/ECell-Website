@@ -1,5 +1,6 @@
 /*importing google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 
 /*reset*/
 /*mostly done by normalize.css*/
@@ -371,6 +372,7 @@ p {
 #recruitments_description img {
   width: 10vw;
 }
+
 #team_main {
   background-image: url("../images/background/background_team_main.jpeg");
   background-repeat: no-repeat;
@@ -581,7 +583,7 @@ p {
   width: 4vw;
   height: auto;
 }
-#rec-1 {
+/*#rec-1 {
   background-image: url("../images/1.png");
   background-repeat: no-repeat;
   background-position: center 45%;
@@ -602,6 +604,94 @@ p {
   border: 2px solid white;
   border-radius: 5px;
   box-shadow: 0px 0px 50px 1px lightgrey;
+}*/
+
+#rec-1,
+#rec-2{
+  background: white;
+  box-shadow: 0px 0px 50px 1px lightgrey;
+  margin: 5% 19% 5% 19%;
+  padding: 5px 10px 5px 10px;
+}
+#rec-1-desc,#rec-2-desc{
+  padding: 20px 0 0 20px;
+}
+#rec-img img{
+  width:20vw;
+  height:auto;
+  margin: 70px 0px 10px 25px;
+}
+#rec-1-h1,#rec-2-h1{
+  color: #000000;
+  font-weight: 900;
+  margin: 0%;
+  font-size: 3vw;
+  text-shadow: 1px 1px #9fa1a3;
+}
+#rec-1-h2{
+  padding-left: 40px;
+  color: #337FB2;
+  text-shadow:1px 1px 1px #A2DEF9 ;
+  font-weight: bolder;
+}
+#rec-2-h2{
+  padding-left: 40px;
+  color: #337FB2;
+  text-shadow:1px 1px 1px #A2DEF9 ;
+  font-weight: bolder;
+}
+#recruitments_description{
+  background: radial-gradient(farthest-corner at 0px 1000px,
+      #C7E9F9 30%, white 70%);
+}
+/*Recruitment Forms*/
+#recruitments-form{
+  background-color: rgb(230, 230, 230);
+  font-family: 'Poppins';
+}
+#recruitments-form p{
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  color: #012136;
+}
+#recruitments-form h2, #recruitments-form h3{
+  font-family:'Spartan', sans-serif;
+  color: #213466;
+}
+.rec-input label{
+  font-size: 12px;
+  color: #012136;
+  margin-bottom: -5px;
+}
+.rec-input-textarea label{
+  font-size: 14px;
+  color: #012136;
+}
+.rec-input input, .rec-input-textarea textarea{
+  width: 100%;
+  border: 1.5px solid #b4b4b4;
+  margin-top: -10px;
+}
+.rec-input-check label, .rec-input-radio label{ /*Form-2*/
+  margin-bottom: -5px;
+}
+.rec-form-btn{
+  border:2px solid #324d99;
+  background-color: #324d99;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  
+}
+
+.rec-form-btn.rec-index{
+  transform: scale(0.9);
+}
+
+.rec-form-btn.rec-index:hover{
+  color:white;
+  transform: scale(1);
 }
 
 /*CSS for startups page*/
@@ -711,6 +801,42 @@ p {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+/* EGALLERY */
+.Egallery{
+  padding: 10px;
+}
+.gallery-heading{
+  margin-top: 50px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery-heading p{
+  font-size: 1.2em;
+}
+.gallery-body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1669A7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery-body .photo-grid{
+  margin: 0 auto;
+  width: 90%;
+  padding: 10px;
+}
+.gallery-body .photo-grid img{
+  width: 270px;
+  border: 5px solid #fff;
+  margin: 10px;
+}
+
 /* CAP page */
 #cap-1 {
   background-image: url("../images/CAP/cap-main.png");
@@ -1372,7 +1498,7 @@ select {
     width: 10vw;
     height: auto;
   }
-  #rec-1 {
+  /*#rec-1 {
     background-image: url("../images/1.png");
     background-repeat: no-repeat;
     background-position: center 45%;
@@ -1392,6 +1518,46 @@ select {
     border-radius: 5px;
     box-shadow: 0px 0px 50px 1px lightgrey;
     margin-right: 50%;
+  }*/
+
+  #rec-1,#rec-2{
+    margin: 10% 5% 10% 5%;
+    text-align: center;
+  }
+  #rec-1-desc,#rec-2-desc{
+    padding: 20px 0 0 0px;
+  }
+  #rec-1-h1,#rec-2-h1{
+    font-size: 10vw;
+  }
+  #rec-1-h2,#rec-2-h2{
+    font-size: 8vw;
+  }
+  #rec-1 img, #rec-2 img{
+    width: 80vw;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  /* EGALLERY */
+  .Egallery{
+    padding: 2px;
+  }
+  .gallery-body .photo-grid{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .gallery-body .photo-grid img{
+    margin: 10x 0;
+    position: absolute;
+    left: 50%;
+  }
+  .gallery-heading h1{
+    font-size: 1.2rem;
+    overflow: hidden;
+  }
+  .gallery-heading p{
+    text-align: center;
   }
   /*CAP*/
   #cap-1 {

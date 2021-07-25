@@ -28,4 +28,5 @@ urlpatterns = [
     path('team/',include('team.urls', namespace = 'team')),
     path('podcasts/',include('podcasts.urls', namespace = 'podcasts')),
     path('broadcast/',include('broadcast.urls', namespace = 'broadcast')),
+    path('recruitment/',include('recruitment.urls', namespace='recruitment'))
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

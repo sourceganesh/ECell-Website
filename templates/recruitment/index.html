@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_meta %}
+<title>E-Cell NITK | Recruitments </title>
+<meta name="description" content="" />
+{% endblock %}
+
+{% block body %}
+    <section id="recruitments-form" class="container-fluid">
+        <div class="row justify-content-center">
+         <div class="rec-form col-md-7 col-sm-10 col-xs-11 bg-white mt-3 mb-5 py-3 px-5">
+           <h2 class="text-center text-dark font-weight-bold mt-4 mb-3 py-2">E-Cell Recruitments</h2>
+           <h3 class="text-center text-dark font-weight-bold mt-2 mb-4 py-2">Management Team</h3>
+           <p>
+            The Management team is the backbone of club operations. The entire club bands together to
+            brainstorm, organize and execute a variety of initiatives including but not limited to the Startup Internship
+            Program,
+            Building Blocks of Business, Learning Portal throughout the year as well as events like E-Summit, Hult Prize,
+            Enterprise
+            and so on.
+           </p> <br>
+           <h3 class="text-center text-dark font-weight-bold mt-2 mb-4 py-2">Media and Website Teams</h3>
+           <p>
+            Media and Website teams serve a key purpose to expand the reach of E-Cell's activities and achievements. The Website Team 
+            aims to create a medium of greater connection with our audience while the Media Teamwork towards creating unique and 
+            insightful content for our multiple channels.
+           </p> <br>
+           <p>
+             Click on the team you are interested in joining to register.
+           </p>
+           <div class="d-md-flex flex-row mt-3 mb-5 mr-7 justify-content-between">
+            <a href="/recruitment/management" class="rec-form-btn hvr-grow rec-index">Management Team</a>
+           <a href="/recruitment/media" class="rec-form-btn hvr-grow rec-index">Media and Publicity Team</a>
+           <a href="/recruitment/web" class="rec-form-btn hvr-grow rec-index">Website Team</a>
+          </div>
+
+          </div>
+      </div>
+    </section>
+{% endblock %}
