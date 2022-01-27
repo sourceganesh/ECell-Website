@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="{% static 'images/logo_ecell 1.svg' %}">
+    <link rel="stylesheet" href="{%static 'css/esummit.css' %}">
+    <title>ESummit 2022</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="{% url 'core:index'%}"><img src="{% static 'images/logo_ecell 1.svg' %}" alt="Ecell-Logo"></a>
+            <img src="{% static 'images/menu.svg' %}" alt="Menu" id="menuBtn">
+            <img src="{% static 'images/cancel-icon.svg' %}" alt="Cancel" id="cancelBtn" class="notVisible">
+        </div>
+        <div class="navContent notVisible" id="navContent">
+            <li class="navLinks"><a href="#home">Home</a></li>
+            <li class="navLinks"><a href="#etalks">E-Talks</a></li>
+            <li class="navLinks"><a href="#competitions">Competitions</a></li>
+            <li class="navLinks"><a href="#workshops">Workshops</a></li>      
+            <!-- <li class="navLinks"><a href="#panelDis">Panel Discussion</a></li>
+            <div class="socials">
+                <p>Find us at : </p>
+
+            </div> -->
+        </div>
+    </nav>
+    <section class="hero-section" id="home">
+       <div class="hero-text">
+           <h1>E-SUMMIT 2022</h1>
+           <h4>Inspire . Invent . Integrate</h4>
+           <p>E-Summit is the flagship event of the Entrepreneur Club at NITK, Surathkal. Envisioned to create an entrepreneurial spirit amongst the next generation of graduates; it is a multi-faceted event that encompasses entrepreneurship talks, business workshops, panel discussions and a pitching event. </p>
+            <!-- <br /> <br /><p>  We invite changemakers from various spheres of work including journalism, entertainment, social entrepreneurship, politics as well as established businesses to serve as mentors for these events.</p> -->
+           <button><a href="#etalks">Explore Now</a></button>
+       </div>
+       <div class="hero-img">
+           <img src="{% static 'images/main-img.svg' %}" alt="">
+       </div>
+    </section>
+    <!--E-Talks-->
+    <section class="etalks-section" id="etalks">
+        <div class="etalks-text">
+            <h1>Entrepreneurs, Businessman & Leaders speak.</h1>
+            <div class="speaker">
+                <div>
+                    <img src="{% static 'images/speaker-1.png' %}" alt="">
+                    <a href="https://zoom.us/webinar/register/WN_Vz4-g3G-SeuAZwvgGSSB8A">Register Now</a>
+                </div>
+                
+                <div>
+                    <img src="{% static 'images/speaker-2.png' %}" alt="">
+                    <a href="https://zoom.us/webinar/register/WN_B4CQtcykS7iWx2ZJte1muw" >Register Now</a>
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!-- E-Pitch
+    <section class="epitch-section" id="epitch">
+        <div>
+            <img src="./images/epitch-img.svg"/>
+        </div>
+        <div class="epitch-text">
+            <h1>E-Pitch</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum turpis velit, at dignissim massa rhoncus eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum turpis velit, at dignissim massa rhoncus eget. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </p>   
+            <button>Explore Now</button>
+        </div>
+    </section>
+    <section class="epitch-accordian"> -->
+        <!--Competitions-->
+        <section class="competitions" id="competitions">
+            <h1>Competitions</h1>    
+              <div class="row2-container">                      
+                <div class="card">
+                    <img src="{% static 'images/bizcosplay.png' %}" alt="">
+                    <div class="card-desc">
+                      <h2>BizCosplay</h2>
+                      <p>A first-of-its-kind event that combines business acumen with pop culture!</p>
+                    </div>
+                    <a href="https://dare2compete.com/competition/bizcosplay-e-summit-22-national-institute-of-technology-karnataka-nitk-surathkal-253418" target="_blank">
+                        <button type="button">Register</button>
+                    </a>
+                  </div>
+                <div class="card">
+                   <img src="{% static 'images/designathon.png' %}" alt="">
+                   <div class="card-desc">
+                    <h2>Designathon</h2>
+                      <p>A no-code hackathon focused on website design!</p>
+                   </div>
+                   <a href="https://dare2compete.com/hackathon/designathon-e-summit-22-national-institute-of-technology-karnataka-nitk-surathkal-253426" target="_blank">
+                      <button type="button">Register</button> 
+                   </a>
+                </div>
+            </div>
+              
+        </section>
+
+    <!--Workshops-->
+    <section class="workshops" id="workshops">
+        <div class="main">
+            <h1>E-Summit Workshops</h1>
+        </div>
+        <div class="workshop1">
+                <img src="{% static 'images/workshop1.png' %}"/>
+                <a class="workshop-link" href="https://zoom.us/webinar/register/WN_Q9J1IU5xS4-S5sfE44RL9w" target="_blank">
+                    Register Here
+                </a>
+        </div>
+        <div class="workshop2">   
+            <img src="{% static 'images/workshop2.png' %}"/>
+                <a class="workshop-link" href="https://zoom.us/webinar/register/WN_TQQ80JqLRJenY3_YAvFkEQ" target="_blank">
+                    Register Here
+                </a>
+        </div>
+        <div class="workshop3">   
+                <img src="{% static 'images/workshop3.png' %}"/>
+                <a class="workshop-link" href="https://zoom.us/webinar/register/WN_4ai4MTNEQ2-S30Cqmtfj7Q" target="_blank">
+                    Register Here
+                </a>
+        <div class="workshop4">   
+                <img src="{% static 'images/workshop4.png' %}"/>
+                <a class="workshop-link" href="https://zoom.us/webinar/register/WN_35MNSvC9QES4jzKCm7nGjA" target="_blank">
+                    Register Here
+                </a>
+        </div>
+    </section>
+
+    <!--Panel Discussion-->
+    <!-- <section class="panel-dis" id="panelDis">
+        <h1>Panel Discussion</h1>
+        <div class="main-panel">
+            <div class="panel-img">
+                <img src="./images/panel-discussion.svg" alt="">
+            </div>
+            <div class="panel-content">
+                <h2>National Education Policy 2022</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, corrupti fuga! Pariatur, reiciendis corporis earum iure itaque delectus ex harum molestias ducimus quos, rerum, dolorum autem ipsam sit. Sint, fugit.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur tempora esse, excepturi placeat sit iusto in perferendis perspiciatis odio temporibus architecto, inventore at vero corporis ipsum aliquid dolorum ea cupiditate.</p>
+                <button>Explore Now </button>
+            </div>
+        </div>
+    </section> -->
+    <footer>
+        <h1>E-Summit 2022</h1>
+        <div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#etalks">E-Talks</a></li>
+                <li><a href="#competitions">Competitions</a></li>
+                <li><a href="#workshops">Workshops</a></li>
+            </ul>
+        </div>
+        <p>Find us at:</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/ecellnitk/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/ecell_nitk" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/ecell_nitk/?hl=en" class="fa fa-instagram"></a>
+        </div> 
+        <p class="copyright"> &copy; Made with Love, by E-Cell NITK</p>   
+    </footer>
+
+    <script src="{% static 'js/app.js'%}"></script>
+</body>
+</html>
